@@ -1,0 +1,146 @@
+<link rel="stylesheet" type="text/css" href="/styles/style_admin.css">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=es"></script>
+<body>
+    <div class="clearfix" id="page"><!-- column -->
+   <div class="position_content" id="page_position_content">
+    <div class="browser_width" id="u178-3-bw">
+     <div class="clearfix pinned-colelem" id="u178-3"><!-- content -->
+      <p>&nbsp;</p>
+     </div>
+    </div>
+    <div class="SlideShowWidget clearfix colelem" id="slideshowu224"><!-- none box -->
+     <div class="popup_anchor" id="u228popup">
+      <div class="SlideShowCaptionPanel clearfix" id="u228"><!-- stack box -->
+      </div>
+     </div>
+    </div>
+    <div class="browser_width" id="u75-3-bw">
+     <div class="clearfix pinned-colelem" id="u75-3" ><!-- content -->
+      <p>&nbsp;</p>
+     </div>
+    </div>
+    <a class="nonblock nontext anim_swing clip_frame clearfix pinned-colelem" id="u76"><!-- image --><div id="u76_clip"><img class="position_content" id="u76_img" src="/images/splat_logo.png" alt=""/></div></a>
+    <div class="clearfix colelem" id="pu618-4" ><!-- group -->
+     <a class="nonblock nontext anim_swing clearfix" id="u618-4" href="#top"><!-- content --><img src="/images/home.png" style="width:75px;"/></a>
+     <a class="nonblock nontext anim_swing clearfix" id="u627-4" href="#info"><!-- content --><img src="/images/reportes.png" style="width:75px;"/></a>
+     <a class="nonblock nontext anim_swing clearfix" id="u626-4" href="#calculadora"><!-- content --><img src="/images/usuarios.png" style="width:75px;"/></a>
+     <a class="nonblock nontext anim_swing clearfix" id="u625-4" href="#reporte"><!-- content --><img src="/images/users.png" style="width:75px;"/></a>
+    <p id="u624-4">BIENVENIDO(A):</p>
+    <p id="u624-user"><%=req.session.user.nombre%></p>
+    </div>
+    <div class="clearfix colelem" id="pu324-3"><!-- group -->
+     <div class="browser_width grpelem" id="u324-3-bw">
+      <div class="clearfix" id="u324-3"><!-- content -->
+       <p>&nbsp;</p>
+      </div>
+     </div>
+       </div>
+       <div id="contenedor_adminr">
+           <div id="tabla_r">
+               <p id="p_rep">REPORTES REALIZADOS</p>
+               <div id="tabla_admin_rep"></div>
+           </div>
+           
+           <div id="mapa_rep">
+            <p id="p_rep">MAPA CON LOS REPORTES</p>
+            <div id="map_admin"></div>
+           </div>
+           
+       </div>
+             <div id="contenedor_rep_detail">
+
+           
+       </div>
+                 <div id="contenedor_tab_users">
+
+<head>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="cssadmin/styleadmin_users.css"/>
+        </head>
+
+        <div class="basic">
+            <div class="table-responsive">
+            <h2>Registro de usuarios</h2>
+            <center>
+            <form action='' method='post' id=''>
+            <table class='table table-hover' id="tabladetalleq">
+                   <tr> 
+                     <th>Nombre de Usuario</th>
+                    <th></th>
+                    <th></th>
+
+                    
+                    <th></th>
+                    </tr>
+                    <% usuarios.forEach(function(UsuariosController){%>
+                   <tr>
+              
+                        <td id='td'><img src='/images/user.png' width='40px' height='40px'/></td>
+                        <td id='td'><input type='text' name='user'  value= "<%=UsuariosController.name%>" id='user' readonly='readonly'/></td>
+                        <td id='td'><a href='borrar.php?user=$row[0]''>Eliminar</a></td>
+                         <td id='td'><a href='detalle_admin.php?user2=$row[0]''>Detalle</a></td>
+                 </tr>
+                <%});%> 
+                 </table>
+         
+                 </form> 
+              
+                  
+                <form action='admin_registro.php?user=$user'>
+                      <input  type="submit" value="Agregar" name="add" id="add"/></div>
+                </form></center>
+            </div>
+        </div>
+           
+       </div>
+    <div id="contenedor_reg_users">
+  <body id="bodlo">  
+         
+        <div class="userq">
+<div class="loginq">
+          <h2>Registro</h2>
+      <form  role="form" action="/usuarios/createadmin" method="post"  id="register_userq">
+  
+      
+     <!-- <input type="text" class="form-control" id="Personas[name]" name="Personas[name]">-->
+      <input type="text" name="Usuarios[name]" id="Usuarios[name]" placeholder="Ingresa tu nombre: Ej. Antonio" />
+      <input type="text" name="Usuarios[apellido]" id="Usuarios[apellido]" required placeholder="Ingresa tu apellido Ej. Rodriguez"/>
+      <input type="text" name="Usuarios[alias]" id="Usuarios[alias]" required placeholder="Ingresa alias Ej.Tony"/>
+      <input type="password" name="Usuarios[contrasena]" id="Usuarios[contrasena]" placeholder="Ingresa contraseña" />
+      <input type="password" name="rpass"  required placeholder="Repite contraseña" /> 
+         <input type="submit" value="Enviar" class="btn btn-default" style="background: #2c4cb5; color: white; ">
+           </div>
+       <input type="text" name="Usuarios[status]"  id="Usuarios[status]" value="1" style="visibility:hidden" >
+     <input type="text" name="Usuarios[tipo]"  id="Usuarios[tipo]" value="2" style="visibility:hidden">
+    </div>
+     
+
+<br>
+       
+    </form>
+       
+ <!--    <input type="submit" value="Registrar" style="background: #2c4cb5; color: white; ">
+      <input type="hidden" name="action" value="registrar"/>-->
+ 
+    </div> 
+        </body>
+           
+       </div>
+        </div>
+    </div>
+</body>
+    <div id="pie">
+<footer>
+    <table style="width:100%">
+  <tr>
+  <td width="400">Desarolladores:<br>Martha Gabriela Rodriguez García<br>María Elvia Cerón Maldonado<br>Ana Karen Cerón Fernández
+  <br>Marytere Vargas Acosta<br>Armando Pérez Moreno</td>
+  <td><center><img src="images/logo3.png" style="width: 35px;height: 35px;"> <br><strong>SPLAT</strong> Tulancingo<br><br><a href="https://www.facebook.com/splatulancingo"><img src="images/facebook.png" style="width: 15px;height: 25px;"></a>
+      <a href="https://twitter.com/splatulancingo"><img src="images/tweet.png"style="width: 35px;height: 25px;margin-left:10px;"></a>
+  <br><br>SPLAT - Tulancingo © 2016</center></td>
+  <td width="400"><center><strong><img src="images/reportes.png" style=" width: 30px;height: 30px;"><br><br>Camino a Ahuehuetitla 301,<br>Reforma la Presa, 43642 Tulancingo, Hgo.</strong><br><br></center></td>
+  </tr>
+</table>
+</footer>
+</div>

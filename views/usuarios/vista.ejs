@@ -1,0 +1,44 @@
+
+<head>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="cssadmin/styleadmin_users.css"/>
+        </head>
+
+        <div class="basic">
+            <div class="table-responsive">
+              <h2>Registro de usuarios</h2>
+                <center>
+  <form id="users_info" action="" method="get">
+               
+<form action='' method='post' id=''>
+ <table class='table table-hover' id="tabladetalleq">
+                   <tr> 
+                     <th>Nombre de Usuario</th>
+                    <th></th>
+                    <th></th>
+
+                    
+                    <th></th>
+                    </tr>
+                    <% usuarios.forEach(function(UsuariosController){%>
+                   <tr>
+              
+                        <td id='td'><img src='/images/user.png' width='40px' height='40px'/></td>
+                        <td id='td'><input type='text' name='user'  value= "<%=UsuariosController.name%>" id='user' readonly='readonly'/></td>
+                        <td id='td'><a href='borrar.php?user=$row[0]''>Eliminar</a></td>
+                         <td id='td'><a href='detalle_admin.php?user2=$row[0]''>Detalle</a></td>
+                 </tr>
+<%});%> 
+         </table>
+         
+         </form> 
+              
+                            
+                </form>
+                  
+                <form action='admin_registro.php?user=$user'>
+                      <input  type="submit" value="Agregar" name="add" id="add"/></div>
+                </form></center>
+            </div>
+        </div>

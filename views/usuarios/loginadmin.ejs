@@ -1,0 +1,35 @@
+
+
+        <head>
+        <meta charset="UTF-8">
+        <title>LOGIN</title>
+         <link rel="icon" type="image/png" href="img/logo.png" />
+         <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/styles/stylelogin.css">
+        
+  
+  </head>
+    <body>    
+        
+           <!-- fin de div register-->
+        <div class="login">
+               <h2>Inicio</h2>
+    <form role="form" action="/usuarios/valida" method="post"  id="register_user"  id="login">
+    
+      
+
+     <!-- #2c4cb5 <input type="text" placeholder="Username"/>
+      <input type="password" placeholder="Password"/>
+  <input type="submit" value="Aceptar">
+    -->
+    <input type="text" name="name" id="name" placeholder="Nombre">
+      <input type="password" name="password" id="password" placeholder="Contraseña">
+    
+    <!--  <button>Aceptar</button>-->
+       <input type="submit" value="Aceptar" class="btn btn-default" style="background: #2c4cb5; color: white; "> 
+    </form>  
+    <button type="button" class="btn btn-default" style="background: #2c4cb5; color: white; "onClick="window.location.href='usuarios/createadmin'"> Registrarse</button>
+         
+            </div><!-- fin de div log_in      <a href="usuarios/valida">Ver</a> -->
+        </div> 
+</html>

@@ -1,0 +1,36 @@
+<head>
+         <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/styles/stylelogin">
+</head>
+        <body id="bodlo">  
+         <div id="barraq">
+        <img src="/images/splat_logo.png" id="logoq">
+      </div>
+        <div class="userq">
+<div class="loginq">
+          <h2>Registro</h2>
+      <form  role="form" action="/usuarios/createadmin" method="post"  id="register_userq">
+  
+      
+     <!-- <input type="text" class="form-control" id="Personas[name]" name="Personas[name]">-->
+      <input type="text" name="Usuarios[name]" id="Usuarios[name]" placeholder="Ingresa tu nombre: Ej. Antonio" />
+      <input type="text" name="Usuarios[apellido]" id="Usuarios[apellido]" required placeholder="Ingresa tu apellido Ej. Rodriguez"/>
+      <input type="text" name="Usuarios[alias]" id="Usuarios[alias]" required placeholder="Ingresa alias Ej.Tony"/>
+      <input type="password" name="Usuarios[contrasena]" id="Usuarios[contrasena]" placeholder="Ingresa contraseña" />
+      <input type="password" name="rpass"  required placeholder="Repite contraseña" /> 
+         <input type="submit" value="Enviar" class="btn btn-default" style="background: #2c4cb5; color: white; ">
+           </div>
+       <input type="text" name="Usuarios[status]"  id="Usuarios[status]" value="1" style="visibility:hidden" >
+     <input type="text" name="Usuarios[tipo]"  id="Usuarios[tipo]" value="2" style="visibility:hidden">
+    </div>
+     
+
+<br>
+       
+    </form>
+       
+ <!--    <input type="submit" value="Registrar" style="background: #2c4cb5; color: white; ">
+      <input type="hidden" name="action" value="registrar"/>-->
+ 
+    </div> 
+        </body>
